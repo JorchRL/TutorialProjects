@@ -1,4 +1,6 @@
 import React from "react";
+import "../../../theme.css";
+import "./Card.css";
 
 const Card = ({ children, highlight }) => {
     const cardClassName = highlight ? "card sale" : "card";
