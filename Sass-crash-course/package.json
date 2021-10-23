@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sass": "^1.43.3"
+  },
+  "scripts": {
+    "sassy": "sass --watch scss/style.scss css/style.css"
+  }
+}
