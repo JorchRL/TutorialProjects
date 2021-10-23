@@ -1,0 +1,70 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[13];
+      grid-template-columns: repeat(13, 1fr);
+  -ms-grid-rows: 800px 600px 600px 1600px;
+      grid-template-rows: 800px 600px 600px 1600px;
+      grid-template-areas: "pf pf pf pf pf pf pf ju ju ju ju ju ju " "fl fl fl fl fl fl fl fl fl fl fl fl fl " "hi hi hi hi hi hi pt pt pt pt pt pt pt " "de de de de de de de de de de de de de ";
+}
+
+.grid-container div {
+  padding: 1em;
+  background: #eee;
+  outline: 1px solid grey;
+}
+
+.grid-container div:nth-child(odd) {
+  background: #ddd;
+}
+
+.product-front {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-area: pf;
+  background-image: url(https://storage.googleapis.com/jeffastor/minicam-1.png);
+  background-size: 100% 100%;
+}
+
+.jumbo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 6;
+  grid-area: ju;
+}
+
+.full-length {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 13;
+  grid-area: fl;
+}
+
+.hightlight {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: hi;
+}
+
+.product-top {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 7;
+  grid-area: pt;
+}
+
+.description {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 13;
+  grid-area: de;
+}

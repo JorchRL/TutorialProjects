@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.grid-container {
+  // margin: 0 5vw;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: 800px 600px 600px 1600px;
+
+  grid-template-areas:
+    "pf pf pf pf pf pf pf ju ju ju ju ju ju "
+    "fl fl fl fl fl fl fl fl fl fl fl fl fl "
+    "hi hi hi hi hi hi pt pt pt pt pt pt pt "
+    "de de de de de de de de de de de de de ";
+
+  div {
+    padding: 1em;
+    background: #eee;
+    outline: 1px solid grey;
+  }
+  div:nth-child(odd) {
+    background: #ddd;
+  }
+}
+
+.product-front {
+  grid-area: pf;
+  background-image: url(https://storage.googleapis.com/jeffastor/minicam-1.png);
+  background-size: 100% 100%;
+}
+.jumbo {
+  grid-area: ju;
+}
+.full-length {
+  grid-area: fl;
+}
+.hightlight {
+  grid-area: hi;
+}
+.product-top {
+  grid-area: pt;
+}
+.description {
+  grid-area: de;
+}
