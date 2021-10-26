@@ -18,8 +18,9 @@ img {
 }
 
 .showcase {
-  background-color: $primary-color;
-  color: #fff;
+  // background-color: $primary-color;
+  // color: set-text-color($primary-color);
+  @include set-background($primary-color);
   height: 600px;
 
   nav {
@@ -35,8 +36,8 @@ img {
       list-style-type: none;
 
       a {
-        // text-decoration: none;
-        // color: $light-color;
+        text-decoration: none;
+        color: set-text-color($primary-color);
         margin-left: 1rem;
         font-size: 1.2rem;
       }
@@ -58,15 +59,11 @@ img {
       font-size: 50px;
       max-width: 30rem;
     }
-    p {
-      margin: 20px 0;
-    }
   }
+}
 
-  a {
-    text-decoration: none;
-    color: $light-color;
-  }
+a {
+  text-decoration: none;
 }
 
 // .btn-secondary {
@@ -75,3 +72,5 @@ img {
 //   background-color: lightcyan;
 //   border-radius: 5px;
 // }
+
+@import "mobile";
