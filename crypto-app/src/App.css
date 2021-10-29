@@ -23,7 +23,7 @@ a:hover {
 }
 
 .navbar {
-  flex: 0.2;
+  flex: auto 0 auto;
   background-color: rgb(0, 21, 41);
 }
 
