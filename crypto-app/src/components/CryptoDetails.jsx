@@ -16,6 +16,8 @@ import {
 } from "@ant-design/icons";
 import { useGetCryptoDetailsQuery } from "../services/cryptoApi";
 
+import LineChart from "./LineChart";
+
 const { Title, Text } = Typography;
 const { Option } = Select;
 
@@ -107,6 +109,7 @@ const CryptoDetails = () => {
           <Option key={date}>{date}</Option>
         ))}
       </Select>
+      {/* <LineChart /> */}
       <Col className='stats-container'>
         <Col className='coin-value-statistics'>
           <Col className='coin-value-statistics-heading'>
